@@ -15,6 +15,6 @@ public class HelloController {
 
     @GetMapping("A")     //@GetMapping is a Spring Boot annotation that maps an HTTP GET request to a controller method.
     public String helloa(){
-        return "Hello Atharva :) !!!";
+        return "<h1>Hello Atharva :) !!!</h1>";
     }
 }
