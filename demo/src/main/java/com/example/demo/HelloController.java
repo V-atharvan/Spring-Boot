@@ -11,7 +11,7 @@ public class HelloController {
         return "Hello World :) !!!";
     }
 
-
+//currently the port is 8080 ,to changethat go applicarion prop and add server.port=anythinghu want
 
     @GetMapping("A")     //@GetMapping is a Spring Boot annotation that maps an HTTP GET request to a controller method.
     public String helloa(){
