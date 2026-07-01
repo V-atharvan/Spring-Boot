@@ -12,9 +12,6 @@ public class DemoApplication {
 //		HelloController controller = new HelloController();
 //		String s = controller.hello();
 //
-//
-//
-//
 //		System.out.println(s);
 	}
 
