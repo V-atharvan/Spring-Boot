@@ -12,10 +12,10 @@ public class Main {
     public static void main(String[] args) {
         StudentRepo studentrepo = new StudentRepo();
 //        studentrepo.createUser();
+//        studentrepo.updateuser();
+//        studentrepo.deleteUser();
 
-        studentrepo.updateuser();
-
-
+            studentrepo.getUserById();
 
     }
 }
