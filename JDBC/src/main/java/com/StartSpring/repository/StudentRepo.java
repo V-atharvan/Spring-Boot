@@ -9,26 +9,26 @@ public class StudentRepo {
     String username = "postgres";
     String password = "Atharva153122";
 
-//    public void createUser (){
-//        try {
-//            Connection connection = DriverManager.getConnection(url,username,password);
-//            Statement statement = connection.createStatement();
-//            String sql = "INSERT INTO students_info (name, email, age) " +
-//                    "VALUES ('Amrut', 'a@gmail.com', 23)";
-//            int result = statement.executeUpdate(sql);
-//            if (result==1){
-//                System.out.println("Data inserted ");
-//            }
-//            else {
-//                System.out.println("bot inserted");
-//            }
-//            connection.close();
-//        }
-//        catch (SQLException e) {
-//            System.out.println("Database Connection failed :( ");
-//            e.printStackTrace();
-//        }
-//    }
+    public void createUser (){
+        try {
+            Connection connection = DriverManager.getConnection(url,username,password);
+            Statement statement = connection.createStatement();
+            String sql = "INSERT INTO students_info (name, email, age) " +
+                    "VALUES ('Amrut', 'ad@gmail.com', 23)";
+            int result = statement.executeUpdate(sql);
+            if (result==1){
+                System.out.println("Data inserted ");
+            }
+            else {
+                System.out.println("bot inserted");
+            }
+            connection.close();
+        }
+        catch (SQLException e) {
+            System.out.println("Database Connection failed :( ");
+            e.printStackTrace();
+        }
+    }
 
 
 
@@ -77,34 +77,34 @@ public class StudentRepo {
 //    }
 
 
-    public void getUserById () {
-        try {
-            Connection connection = DriverManager.getConnection(url,username,password);
-            Statement statement = connection.createStatement();
-            String sql = "SELECT id, name, email, age" +
-                    " FROM students_info where id = 2";
-
-            ResultSet resultSet = statement.executeQuery(sql);
-            Student student = mapRow (resultSet);
-            System.out.println(student);
-
-
-            connection.close();
-        }
-        catch (SQLException e) {
-            System.out.println("Database Connection failed :( ");
-            e.printStackTrace();
-        }
-    }
-
-    private Student mapRow(ResultSet resultSet) throws SQLException {
-        Student student= new Student();
-
-        student.setId(resultSet.getLong("id"));
-        student.setName(resultSet.getString("name"));
-        student.setEmail(resultSet.getString("email"));
-        student.setAge(resultSet.getInt("age"));
-
-        return student;
-    }
+//    public void getUserById () {
+//        try {
+//            Connection connection = DriverManager.getConnection(url,username,password);
+//            Statement statement = connection.createStatement();
+//            String sql = "SELECT id, name, email, age" +
+//                    " FROM students_info where id = 2";
+//
+//            ResultSet resultSet = statement.executeQuery(sql);
+//            Student student = mapRow (resultSet);
+//            System.out.println(student);
+//
+//
+//            connection.close();
+//        }
+//        catch (SQLException e) {
+//            System.out.println("Database Connection failed :( ");
+//            e.printStackTrace();
+//        }
+//    }
+//
+//    private Student mapRow(ResultSet resultSet) throws SQLException {
+//        Student student= new Student();
+//
+//        student.setId(resultSet.getLong("id"));
+//        student.setName(resultSet.getString("name"));
+//        student.setEmail(resultSet.getString("email"));
+//        student.setAge(resultSet.getInt("age"));
+//
+//        return student;
+//    }
 }

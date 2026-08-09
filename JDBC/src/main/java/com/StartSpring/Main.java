@@ -11,11 +11,11 @@ import java.sql.SQLException;
 public class Main {
     public static void main(String[] args) {
         StudentRepo studentrepo = new StudentRepo();
-//        studentrepo.createUser();
+        studentrepo.createUser();
 //        studentrepo.updateuser();
 //        studentrepo.deleteUser();
 
-            studentrepo.getUserById();
+//            studentrepo.getUserById();
 
 
 
