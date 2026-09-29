@@ -5,7 +5,7 @@ public class OrderService {
 
     private PaymentService paymentService;
 
-    public  OrderService(PaymentService service) {
+    public  OrderService(PaymentService paymentService) {
         this.paymentService = paymentService;
     }
 
